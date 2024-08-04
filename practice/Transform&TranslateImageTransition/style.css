@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 200px;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    float: left;
+    transform: skewX(-10deg);
+    margin-top: 25%;
+    margin-left: 36%;
+    border: 6px solid red;
+    border-radius: 10%;
+    transition: all 1s;
+    transform: skewX(-30deg);
+}
+
+.instagramLogo, .twitterLogo, .whatsappLogo, .youtubeLogo {
+    margin-left: -10%;
+}
+
+.facebookLogo:hover {
+    transform: skewX(0deg) translate(100px,-300px) rotate(360deg) scale(1.2);
+}
+.instagramLogo:hover {
+    transform: skewX(0deg) translate(-10px,-300px) rotate(360deg) scale(1.2,1.2);
+}
+.twitterLogo:hover {
+    transform: skewX(0deg) translate(-60px,-300px) rotate(360deg) scale(1.2,1.2);
+}
+.whatsappLogo:hover {
+    transform: skewX(0deg) translate(-80px,-300px) rotate(360deg) scale(1.2,1.2);
+}
+.youtubeLogo:hover {
+    transform: skewX(0deg) translate(-120px,-300px) rotate(360deg) scale(1.2,1.2);
+}

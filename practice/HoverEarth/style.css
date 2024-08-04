@@ -1,0 +1,33 @@
+
+
+.fieldset {
+    width: 600px;
+    height: 300px;
+    overflow: D;
+}
+
+.image {
+    margin-left: 150px;
+    margin-right: 150px;
+    width: 300px;
+    height: 300px;
+}
+
+
+.fieldset:hover {
+    border: 6px double black;
+    .legend {
+        margin-left: auto;
+    }
+    .image {
+        margin-left: 0;
+        margin-right: 0;
+        float: left;
+    }
+    p {
+        width: 150px;
+        float: left;
+        margin-left: 50px;
+    }
+}
+
