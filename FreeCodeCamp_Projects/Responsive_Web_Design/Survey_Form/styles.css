@@ -1,0 +1,71 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(https://c4.wallpaperflare.com/wallpaper/708/846/337/anime-demon-slayer-kimetsu-no-yaiba-tanjirou-kamado-hd-wallpaper-thumb.jpg);
+    background-color: #1b1b32;
+    color: #f3f3f3;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding-top: 4rem
+}
+
+h1,
+p {
+    text-align: center;
+}
+
+#description {
+    font-style: italic;
+}
+
+form {
+    width: 60vw;
+    max-width: 700px;
+    min-width: 300px;
+    margin: 2rem auto 0 auto;
+    background-color: #1b1b32cc;
+    padding: 2.5rem;
+    border-radius: 1%;
+}
+
+label {
+    display: block;
+    margin: 1rem 0 2rem 0;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    margin-top: 0.25rem;
+    min-height: 2em;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 2.5px;
+}
+
+.inline {
+    display: inline;
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+#optional-label {
+    margin: 0;
+}
+
+legend {
+    margin-bottom: 0.25rem
+}
+
+input[type="submit"] {
+    display: block;
+    background-color: #37AF65;
+    color: #F3F3F3;
+    min-height: 2rem;
+    font-size: medium;
+    border-radius: 5px;
+    border: none;
+}

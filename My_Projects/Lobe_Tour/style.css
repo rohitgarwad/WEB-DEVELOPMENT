@@ -1,0 +1,85 @@
+:root {
+    --primary-color: #fff;
+    --secondary-color: #04ddb2;
+    --font-color1: #333;
+    --font-color2: #767676;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: LabGrotesque, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+/* header */
+.header {
+    position: fixed;
+    max-width: 100vw;
+    width: 100%;
+    height: 80px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* svg logo */
+/* .svg-container {
+    margin-inline: 4rem;
+} */
+
+svg {
+    width: 80px;
+}
+
+/* download button */
+.btn-container {
+    /* margin-left: auto;
+    margin-right: 4rem; */
+    padding: 5px;
+}
+
+.btn-download {
+    width: 120px;
+    height: 45px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn-download:hover {
+    transform: scale(1.1);
+}
+
+/* navbar links */
+.navbar-container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: var(--font-color2);
+    font-size: 1.2rem;
+    font-weight: 600;
+}

@@ -1,0 +1,31 @@
+li {
+    font-weight: 700;
+}
+
+.html {
+    color: #DD4B25;
+}
+.css {
+    color: #254BDD;
+}
+.javascript {
+    color: #EFD81D;
+}
+.react {
+    color: #5ED2F3;
+}
+.tailwind {
+    color:#0EA5E9;
+}
+[someName] {
+    background-color: green;
+}
+#web {
+    background-color: aquamarine;
+}
+body h1:hover {
+    color:tomato
+}
+.myname:hover {
+    color: orange;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    </link>
+    <title>Product Landing Page</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo">
+            <img id="header-img"
+                src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="logo"
+                width="200" />
+        </div>
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="#Features" class="nav-link">Features</a></li>
+                <li><a href="#How_It_Works" class="nav-link">How It Works</a></li>
+                <li><a href="#Pricing" class="nav-link">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero-section">
+        <h2>Handcrafted, home-made masterpieces</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input id="email" name="email" type="email" placeholder="Enter your email address" />
+            <input id="submit" type="submit" value="GET STARTED" />
+        </form>
+    </section>
+    <div class="container">
+        <section class="features" id="Features">
+            <div class="grid-text">
+                <h2>Premium Materials</h2>
+                <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of
+                    your purchase.</p>
+            </div>
+            <div class="grid-text">
+                <h2>Fast Shipping</h2>
+                <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free
+                    returns if you are not satisfied.</p>
+            </div>
+            <div class="grid-text">
+                <h2>Quality Assurance</h2>
+                <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test
+                    the pitch of your instrument.</p>
+            </div>
+        </section>
+        <section class="how-it-works" id="How_It_Works">
+            <iframe id="video" src="https://www.youtube.com/embed/y8Yv4pnO7qc"
+                title="Roman Carnival Overture Op. 9 for Five Trombones" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section class="pricing" id="Pricing">
+            <div class="price-cards">
+                <div class="card card-1">
+                    <div class="card-name">TENOR TROMBONE</div>
+                    <h3>$600</h3>
+                    <ol>
+                        <li>Lorem ipsum.</li>
+                        <li>Lorem ipsum.</li>
+                        <li>Lorem ipsum dolor.</li>
+                        <li>Lorem ipsum.</li>
+                    </ol>
+                    <button>SELECT</button>
+                </div>
+                <div class="card card-2">
+                    <div class="card-name">BASS TROMBONE</div>
+                    <h3>$900</h3>
+                    <ol>
+                        <li>Lorem ipsum.</li>
+                        <li>Lorem ipsum.</li>
+                        <li>Lorem ipsum dolor.</li>
+                        <li>Lorem ipsum.</li>
+                    </ol>
+                    <button>SELECT</button>
+                </div>
+                <div class="card card-3">
+                    <div class="card-name">VALVE TROMBONE</div>
+                    <h3>$600</h3>
+                    <ol>
+                        <li>Plays similar to a Trumpet</li>
+                        <li>Great for Jazz Bands</li>
+                        <li>Lorem ipsum dolor.</li>
+                        <li>Lorem ipsum.</li>
+                    </ol>
+                    <button>SELECT</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-grid">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>Copyright 2016, Original Trombones</p>
+        </footer>
+    </div>
+</body>
+
+</html>

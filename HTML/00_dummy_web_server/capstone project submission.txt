@@ -1,0 +1,42 @@
+In the original WhatsApp, the functions are dependent on mobile number. The account registration and usability is only possible if the sim is in the current mobile and the number matches.
+our version of WhatsApp clone supports the account registration through Google Login. It increases the reusability of the same account on multiple platforms. Having a mobile number is not a priority to use the app.
+Google OAuth provides a encryption to our client accounts i.e., by encoding credentials with secure key to generate a JWT(json web token).
+Idea is to develop a exclusive real-time chatting web application, which basically mimics the original WhatsApp web.
+
+
+
+
+
+
+
+
+The WhatsApp clone project is a web-based application that mimics the features and functionality of the popular messaging app WhatsApp.
+The project uses HTML, CSS(Material UI), JavaScript(React js, Express js, Node js), Socket IO and MongoDB as the main technologies to create a responsive and real-time chat interface.
+The project demonstrates the use of various web development concepts, such as HTML(MUI) elements, CSS styling, JavaScript events, React Hooks, Google authentication, and MongoDB database.
+The project also showcases the design and layout of the WhatsApp web UI, including the chat window, message input box, and conversations.
+The project aims to provide a learning experience for web developers who wants to create their own chat applications using modern web technologies.
+Technologies Used:
+MongoDB: Database to store user information, messages, and group data.
+Express.js: Backend framework to handle server-side logic and API
+requests.
+React.js: Frontend library for building user interfaces.
+Node.js: JavaScript runtime for server-side development.
+Socket.IO: Realtime bidirectional event-based communication library.
+JWT(JSON Web Tokens): For user authentication. (jwt= google credentials + secret key)
+Material UI: UI component library for React.
+Axios: Making HTTP Requests and handling Responses.
+Key Features:
+User registration and authentication using Google OAuth service.
+Real-time chatting and bi-directional communication using Socket.IO.
+Sending and receiving messages in chat.
+Attachments support (images, documents).
+View message timestamps.
+Notification for latest message.
+Responsive design for various screen sizes.
+Future Enhancements:
+To further elevate the platform's capabilities, future enhancements may include:
+End-to end encryption for messages.
+Message deletion and editing.
+Attaching emojis in chat.
+User profile customization.
+Notification system.

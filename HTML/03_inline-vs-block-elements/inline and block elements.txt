@@ -1,0 +1,29 @@
+inline elements:
+<b>
+<i>
+<img>
+<span>
+
+block elements:
+<p>
+<h1-6>
+<div>
+
+semantic elements(meaningful):
+header
+nav
+section
+article
+aside
+footer
+em
+strong
+
+global attributes:
+style
+id 
+class
+data-*
+
+custom attributes:
+anything user defined
