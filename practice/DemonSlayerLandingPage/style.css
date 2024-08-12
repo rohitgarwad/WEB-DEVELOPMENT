@@ -1,0 +1,148 @@
+@font-face {
+  font-family: bloodcrow;
+  src: url(assets/blood-crow/bloodcrow.ttf);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: bloodcrow;
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(
+      0deg,
+      transparent,
+      red,
+      transparent
+    ), url(./assets/Screenshot\ 2024-06-11\ 170726.png);
+  border-bottom: 1px solid black;
+}
+
+nav img {
+  margin-left: 50px;
+  padding: 5px;
+  height: 100px;
+}
+
+.nav-links {
+  float: right;
+  margin-right: 50px;
+  margin-top: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  padding: 15px;
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+}
+
+main {
+  width: 100%;
+  height: 90vh;
+  background-image: linear-gradient(
+      0deg,
+      red,
+      transparent,
+      transparent,
+      transparent,
+      red
+    ),
+    url(./assets/Screenshot\ 2024-06-11\ 170726.png);
+  background-size: cover;
+}
+
+.title-section {
+  padding: 50px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.title-section h1 {
+  font-size: 48px;
+  padding: 5px;
+}
+
+.title-section p {
+  font-size: 20px;
+  padding: 5px;
+}
+
+.search-box {
+  margin-top: 20px;
+}
+
+.search-box input,
+.search-box button {
+  padding: 4px;
+  border: none;
+  border-radius: 5px;
+}
+
+.cards-section {
+  padding: 50px;
+  text-align: center;
+}
+
+.cards {
+  height: 400px;
+  width: 300px;
+  float: left;
+  border: 2px solid #ffb73b;
+  border-radius: 20px;
+  margin: 20px;
+  background-color: #ffb73b70;
+}
+
+.cards img {
+  height: 50%;
+  width: 100%;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.card1 {
+  margin-left: 150px;
+}
+
+.cards h2 {
+  padding: 10px;
+}
+
+.cards p {
+  padding: 10px;
+  font-size: 18px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.cards button {
+  margin-top: 15px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  background-color: chocolate;
+  cursor: pointer;
+}
+
+footer {
+  height: 100px;
+  text-align: center;
+  background: linear-gradient(60deg, red, transparent, red, transparent, red), url(./assets/demonslayer_logo.jpeg.jpg);
+  background-size: contain;
+  padding: 35px;
+  border-top: 1px solid black;
+}
+
+footer span {
+  font-size: 20px;
+  font-weight: 900;
+}
