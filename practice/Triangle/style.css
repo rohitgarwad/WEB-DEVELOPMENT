@@ -1,0 +1,47 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100px;
+}
+
+.triangle {
+    border-bottom: 100px solid black;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    margin-bottom: 50px;
+}
+
+.triangle1 {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    position: relative;
+}
+
+.s1, .s2, .s3 {
+    height: 0px;
+    width: 100px;
+    border: 2px solid red;
+    position: absolute;
+}
+
+.s1 {
+    top: 50%;
+    left: 7%;
+    transform: rotate(-45deg);
+}
+
+.s2 {
+    top: 50%;
+    right: 7%;
+    transform: rotate(45deg);
+}
+
+.s3 {
+    top: 68%;
+    left: 15%;
+    width: 137px;
+    transform: translateY(-15%);
+}
