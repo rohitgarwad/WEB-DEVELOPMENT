@@ -1,0 +1,151 @@
+:root {
+  --light-gray: #dfdfe2;
+  --dark-blue: #0a0a23;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-blue);
+  color: var(--light-gray);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  padding: 40px 10px;
+}
+
+.freecodecamp-logo {
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+#change-due {
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  margin: 10px 0 20px;
+}
+
+.input-div label {
+  font-size: 18px;
+}
+
+.user-input {
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+}
+
+.check-btn-styles {
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  font-size: 18px;
+  color: #0a0a23;
+  font-weight: bold;
+  background-color: #feac32;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border-width: 3px;
+  border-color: #feac32;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-screen {
+  border: 10px solid #99c9ff;
+  background-color: black;
+  height: 50px;
+  width: 200px;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-left: -40px;
+}
+
+.connector {
+  width: 40px;
+  height: 30px;
+  background-color: #99c9ff;
+  margin-left: -20px;
+}
+
+.top-register {
+  width: 325px;
+  height: 250px;
+  background-color: #99c9ff;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  border-radius: 35px 35px 0 0;
+}
+
+.btns-container {
+  width: 25%;
+}
+
+.btn {
+  height: 20px;
+  width: 20px;
+  background-color: black;
+  border-radius: 10%;
+  border: none;
+}
+
+.cash-drawer-display {
+  background-color: white;
+  color: black;
+  font-size: 1.1rem;
+  width: 55%;
+  height: 95%;
+  padding: 10px;
+}
+
+.bottom-register {
+  width: 325px;
+  height: 50px;
+  background-color: #99c9ff;
+  margin-top: 10px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  margin: 15px auto;
+  border-radius: 50%;
+}
