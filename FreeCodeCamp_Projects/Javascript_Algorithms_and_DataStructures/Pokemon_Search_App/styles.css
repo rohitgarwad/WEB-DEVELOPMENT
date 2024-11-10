@@ -1,0 +1,260 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+body {
+  height: 100vh;
+  background-color: #1b1b32;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+  color: #0a0a23;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.freecodecamp-logo {
+  height: 30px;
+  margin: 25px 0;
+}
+
+main h1 {
+  color: white;
+  text-align: center;
+  font-size: 1.7em;
+}
+
+.container {
+  width: 325px;
+  margin: 25px 0;
+  background-color: #f5f6f7;
+  border: 1px solid #f5f6f7;
+  border-radius: 15px;
+  box-shadow: 10px 10px 0 0 rgba(223, 220, 220, 0.75);
+}
+
+#search-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+label {
+  align-self: center;
+}
+
+#search-input {
+  height: 40px;
+  width: 200px;
+  padding-left: 10px;
+}
+
+#search-button {
+  height: 40px;
+  width: 80px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #7f21ab;
+  color: #f5f6f7;
+  border: none;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.top-container {
+  min-height: 325px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0 0 10px;
+  background-color: #f0f1f7;
+}
+
+.name-and-id {
+  height: 28px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.size {
+  height: 22px;
+  font-size: 0.85rem;
+}
+
+.sprite-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+}
+
+#sprite {
+  width: 180px;
+}
+
+.types {
+  min-height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 5px;
+}
+
+.type {
+  width: 66px;
+  padding: 5px;
+  font-size: 0.7rem;
+  text-align: center;
+  border-radius: 5px;
+  background-color: red;
+  text-transform: uppercase;
+}
+
+/* Special styling for Pokémon types */
+
+.normal {
+  background-color: #b7b7aa;
+}
+
+.fire {
+  background-color: #ff6f52;
+}
+
+.water {
+  background-color: #42a1ff;
+}
+
+.electric {
+  background-color: #fecc33;
+}
+
+.grass {
+  background-color: #78cc55;
+}
+
+.ice {
+  background-color: #66ccfe;
+}
+
+.fighting {
+  background-color: #d3887e;
+}
+
+.poison {
+  background-color: #c68bb7;
+}
+
+.ground {
+  background-color: #dfba52;
+}
+
+.flying {
+  background-color: #8899ff;
+}
+
+.psychic {
+  background-color: #ff66a3;
+}
+
+.bug {
+  background-color: #aabb23;
+}
+
+.rock {
+  background-color: #baaa66;
+}
+
+.ghost {
+  background-color: #9995d0;
+}
+
+.dragon {
+  background-color: #9e93f1;
+}
+
+.dark {
+  background-color: #b59682;
+}
+
+.steel {
+  background-color: #abaabb;
+}
+
+.fairy {
+  background-color: #ed99ed;
+}
+
+.bottom-container {
+  min-height: 325px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-container table {
+  width: 100%;
+  font-size: 1rem;
+  color: #f5f6f7;
+  background-color: #7f21ab;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+tr {
+  border-bottom: 5px solid #f5f6f7;
+}
+
+td,
+th {
+  text-align: center;
+  padding: 8px;
+}
+
+th:nth-child(even),
+td:nth-child(even) {
+  border-left: 5px solid #f5f6f7;
+}
+
+@media screen and (min-width: 550px) {
+  main h1 {
+    font-size: 2em;
+  }
+  .container {
+    width: 450px;
+  }
+  #search-form,
+  .top-container,
+  .bottom-container {
+    width: 95%;
+  }
+  .type {
+    width: 75px;
+  }
+}
