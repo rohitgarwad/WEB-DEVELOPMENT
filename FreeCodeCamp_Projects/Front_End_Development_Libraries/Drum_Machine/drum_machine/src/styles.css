@@ -9,6 +9,10 @@
 body {
   background-color: #8d8d8d;
   font-family: Russo One;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
   user-select: none;
 }
 
