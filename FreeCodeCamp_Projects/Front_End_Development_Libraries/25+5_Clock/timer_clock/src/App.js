@@ -105,7 +105,7 @@ function App() {
         setIsPaused(false);
         intervalId.current = setInterval(() => {
           changeBreakSec();
-        }, 100);
+        }, 1000);
       } else {
         if (!isPaused) {
           setTimerMin((prevMin) => {
@@ -118,7 +118,7 @@ function App() {
         setIsPaused(false);
         intervalId.current = setInterval(() => {
           changeSessionSec();
-        }, 100);
+        }, 1000);
       }
 
       function changeSessionMin() {
