@@ -26,6 +26,12 @@ app.get("/api/hello", function (req, res) {
   res.json({ greeting: 'hello API' });
 });
 
+// API endpoint for empty date parameter
+app.get("/api", function (req, res) {
+  let date = new Date();
+  res.json({ unix: date.getTime(), utc: date.toUTCString() });
+})
+
 // API endpoint for Timestamp Microservice
 app.get("/api/:date", function (req, res) {
   let dateString = req.params.date;
