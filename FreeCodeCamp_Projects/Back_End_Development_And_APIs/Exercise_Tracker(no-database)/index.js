@@ -23,7 +23,12 @@ app.post('/api/users', (req, res) => {
       username: req.body.username,
       _id: uuidv4(),
     }
-    users.push(user);
+    users.push({
+      username: user.username,
+      _id: user._id,
+      count: 0,
+      log: [],
+    });
     res.json(user);
   } else {
     res.json({ error: "please provide username" })
@@ -51,7 +56,7 @@ app.post('/api/users/:_id/exercises', (req, res) => {
   if (existingUser) {
     let description = req.body.description;
     let duration = parseInt(req.body.duration);
-    let date = new Date(req.body.date).toDateString() || new Date().toDateString;
+    let date = req.body.date ? new Date(req.body.date) : new Date();
 
     let exercise = {
       description: description,
@@ -59,11 +64,7 @@ app.post('/api/users/:_id/exercises', (req, res) => {
       date: date,
     }
 
-    if (existingUser.log) {
-      existingUser.log = [...existingUser.log, exercise];
-    } else {
-      existingUser.log = [exercise];
-    }
+    existingUser.log = [...existingUser.log, exercise];
 
     existingUser.count = existingUser.log.length;
 
@@ -71,7 +72,7 @@ app.post('/api/users/:_id/exercises', (req, res) => {
       username: existingUser.username,
       description: description,
       duration: duration,
-      date: date,
+      date: date.toDateString(),
       _id: existingUser._id
     });
   } else {
@@ -83,31 +84,37 @@ app.post('/api/users/:_id/exercises', (req, res) => {
 app.get('/api/users/:_id/logs', (req, res) => {
   let existingUser = users.find(user => user._id === req.params._id);
   if (existingUser) {
-    if (req.query.from || req.query.to) {
-      let filterLogs = existingUser.log.filter(log => (new Date(log.date).getDate() >= new Date(req.query.from).getDate()) && (new Date(log.date).getDate() <= new Date(req.query.to).getDate()));
-      let limit = parseInt(req.query?.limit);
-      if (limit >= 0) {
-        res.json({
-          username: existingUser.username,
-          _id: existingUser._id,
-          from: new Date(req.query.from).toDateString(),
-          to: new Date(req.query.to).toDateString(),
-          count: limit >= filterLogs.length ? filterLogs.length : limit,
-          log: limit >= filterLogs.length ? filterLogs : filterLogs.slice(0, limit),
-        })
-      } else {
-        res.json({
-          username: existingUser.username,
-          _id: existingUser._id,
-          from: new Date(req.query.from).toDateString(),
-          to: new Date(req.query.to).toDateString(),
-          count: filterLogs.length,
-          log: filterLogs,
-        });
-      }
-    } else {
-      res.json(existingUser);
+    let limit = parseInt(req.query?.limit);
+    let filterLogs;
+
+    if (req.query.from && req.query.to) {
+      filterLogs = existingUser.log.filter(log => (log.date.getDate() >= new Date(req.query.from).getDate()) && (log.date.getDate() <= new Date(req.query.to).getDate()));
+    } else if (req.query.from) {
+      filterLogs = existingUser.log.filter(log => (log.date.getDate() >= new Date(req.query.from).getDate()) && (log.date.getDate() <= new Date().getDate()));
+    } else if (req.query.to) {
+      filterLogs = existingUser.log.filter(log => (log.date.getDate() <= new Date(req.query.to).getDate()));
     }
+    else {
+      filterLogs = existingUser.log.filter(log => (log.date.getDate() <= new Date().getDate()));
+    }
+
+    filterLogs = filterLogs.sort(function(a, b) { return b.date - a.date}).map(log => {
+      return {
+        description: log.description,
+        duration: log.duration,
+        date: log.date.toDateString(),
+      }
+    });
+
+    res.json({
+      username: existingUser.username,
+      _id: existingUser._id,
+      from: req.query.from && new Date(req.query.from).toDateString(),
+      to: req.query.to && new Date(req.query.to).toDateString(),
+      count: (!limit || limit >= filterLogs.length) ? filterLogs.length : limit,
+      log: (!limit || limit >= filterLogs.length) ? [...filterLogs] : filterLogs.slice(0, limit),
+    })
+
   } else {
     res.json({ error: `user not found with _id: ${req.params._id}` });
   }
