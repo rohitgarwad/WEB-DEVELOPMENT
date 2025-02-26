@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags and title -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Countries</title>
+  <!-- External stylesheets and scripts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- Header section -->
+  <header class="header-container">
+    <div class="header-content">
+      <h2 class="title"><a href="/">Where in the world?</a></h2>
+      <p class="theme-switcher"></p>
+    </div>
+  </header>
+  <!-- Main content section -->
+  <main class="main-container">
+    <div class="search-filter-container">
+      <!-- Search input -->
+      <div class="search-container">
+        <i class="fa-solid fa-search"></i>
+        <input type="text" name="search" id="search" placeholder="Search for a country..." />
+      </div>
+      <!-- Region filter dropdown -->
+      <select title="region-filter" name="region" id="region" class="region-select">
+        <option hidden>Filter by Region</option>
+        <option value="africa">Africa</option>
+        <option value="america">America</option>
+        <option value="asia">Asia</option>
+        <option value="europe">Europe</option>
+        <option value="oceania">Oceania</option>
+      </select>
+    </div>
+    <!-- Countries container -->
+    <div class="countries-container">
+    </div>
+  </main>
+</body>
+
+</html>
